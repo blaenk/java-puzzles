@@ -38,12 +38,12 @@ public class StringCompress {
 
     @Test
     public void testStringCompress() {
-        assertThat(compress("aabcccccaaa"), equalTo("a2b1c5a3"));
-        assertThat(compress("aaaabbc"), equalTo("a4b2c1"));
-        assertThat(compress("aaaaabbbbcd"), equalTo("a5b4c1d1"));
-        assertThat(compress("abc"), equalTo("abc"));
+        assertThat(compress("aabcccccaaa"), is("a2b1c5a3"));
+        assertThat(compress("aaaabbc"), is("a4b2c1"));
+        assertThat(compress("aaaaabbbbcd"), is("a5b4c1d1"));
+        assertThat(compress("abc"), is("abc"));
 
-        assertThat(compress("abcd"), equalTo("abcd"));
-        assertThat(compress("dont"), equalTo("dont"));
+        assertThat(compress("abcd"), is("abcd"));
+        assertThat(compress("dont"), is("dont"));
     }
 }

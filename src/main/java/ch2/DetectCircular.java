@@ -37,22 +37,12 @@ public class DetectCircular {
 
     @Test
     public void testDedup() {
-        Node<Integer> a = new Node<>();
-        Node<Integer> b = new Node<>();
-        Node<Integer> c = new Node<>();
-        Node<Integer> d = new Node<>();
-        Node<Integer> e = new Node<>();
+        Node<Integer> e = new Node<>(5, null);
+        Node<Integer> d = new Node<>(4, e);
+        Node<Integer> c = new Node<>(3, d);
+        Node<Integer> b = new Node<>(2, c);
+        Node<Integer> a = new Node<>(1, b);
 
-        a.value = 1;
-        b.value = 2;
-        c.value = 3;
-        d.value = 4;
-        e.value = 5;
-
-        a.next = b;
-        b.next = c;
-        c.next = d;
-        d.next = e;
         e.next = c;
 
         Node<Integer> start = cycleStart(a);

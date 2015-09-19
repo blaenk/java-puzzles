@@ -2,8 +2,6 @@ package ch1;
 
 import org.junit.Test;
 
-import java.util.BitSet;
-
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
